@@ -1,4 +1,4 @@
-from django.db import models
+from django.db import models # type: ignore
 
 # Create your models here.
 class Personal(models.Model):
@@ -9,5 +9,4 @@ class Personal(models.Model):
     estadoper = models.CharField()
 
     class Meta:
-        managed = False
         db_table = 'personal'

@@ -1,4 +1,4 @@
-from django.db import models
+from django.db import models # type: ignore
 
 # Create your models here.
 class Producto(models.Model):
@@ -11,5 +11,4 @@ class Producto(models.Model):
     nombreproducto = models.CharField(max_length=255, blank=True, null=True)
 
     class Meta:
-        managed = False
         db_table = 'producto'

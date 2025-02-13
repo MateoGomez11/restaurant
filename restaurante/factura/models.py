@@ -1,4 +1,4 @@
-from django.db import models
+from django.db import models  # type: ignore
 
 from pedido.models import Pedido
 from personal.models import Personal
@@ -15,5 +15,4 @@ class Factura(models.Model):
     formapagofactura = models.CharField()
 
     class Meta:
-        managed = False
         db_table = 'factura'

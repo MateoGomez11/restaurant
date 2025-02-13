@@ -1,4 +1,4 @@
-from django.db import models
+from django.db import models # type: ignore
 from mesa.models import Mesa
 from personal.models import Personal
 from producto.models import Producto 
@@ -14,7 +14,6 @@ class Pedido(models.Model):
     comentariosped = models.CharField(blank=True, null=True)
 
     class Meta:
-        managed = False
         db_table = 'pedido'
 
 
@@ -25,5 +24,4 @@ class Pedidoxproducto(models.Model):
     cantproducto = models.SmallIntegerField()
 
     class Meta:
-        managed = False
         db_table = 'pedidoxproducto'
