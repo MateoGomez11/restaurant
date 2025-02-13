@@ -1,4 +1,4 @@
-from django.db import models
+from django.db import models # type: ignore
 
 # Create your models here.
 class Mesa(models.Model):
@@ -8,5 +8,4 @@ class Mesa(models.Model):
     ubimesa = models.CharField()
 
     class Meta:
-        managed = False
         db_table = 'mesa'
