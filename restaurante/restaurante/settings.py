@@ -44,8 +44,14 @@ INSTALLED_APPS = [
     'mesa',
     'personal',
     'pedido',
-    'factura'
+    'factura',
+    'drf_spectacular'
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -86,7 +92,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'restaurantBD',
         'USER':'postgres',
-        'PASSWORD':'2101',
+        'PASSWORD':'postgres',
         'HOST':'localhost',
         'PORT':'5432'
     }
@@ -133,3 +139,4 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
